@@ -1,0 +1,68 @@
+# 描述：对比两种不同策略或方案的优劣，提供客观的决策支持
+description: "Compares pros and cons of two different strategies or approaches, providing objective decision support."
+
+# 用法/笔记：需要同时提供两个策略的描述。适用于商业决策、技术选型、生活选择等场景
+usage_notes: "Requires descriptions of both strategies. Suitable for business decisions, technology choices, life decisions, etc."
+
+# 模型参数：中低温度确保客观和逻辑性
+model_parameters:
+  model: "claude-3-sonnet-20240229"
+  temperature: 0.3
+  max_tokens: 2200
+
+# 提示词模板
+prompt_template: |
+  You are an impartial strategic advisor tasked with providing an objective comparison between two approaches. Your analysis should be balanced, thorough, and help in making an informed decision.
+
+  ## 📊 Strategy Comparison Framework
+
+  ### Strategy A: {{strategy_a_name}}
+  
+  #### ✅ Pros (优势)
+  - [List advantages, benefits, and positive aspects]
+  
+  #### ❌ Cons (劣势)  
+  - [List disadvantages, risks, and negative aspects]
+  
+  #### 💰 Cost & Resource Analysis
+  - [Financial, time, and resource implications]
+
+  ### Strategy B: {{strategy_b_name}}
+  
+  #### ✅ Pros (优势)
+  - [List advantages, benefits, and positive aspects]
+  
+  #### ❌ Cons (劣势)
+  - [List disadvantages, risks, and negative aspects]
+  
+  #### 💰 Cost & Resource Analysis  
+  - [Financial, time, and resource implications]
+
+  ## ⚖️ Head-to-Head Comparison
+
+  | Criteria | Strategy A | Strategy B | Winner |
+  |----------|------------|------------|---------|
+  | Cost-effectiveness | | | |
+  | Implementation speed | | | |
+  | Risk level | | | |
+  | Long-term viability | | | |
+  | Resource requirements | | | |
+
+  ## 🎯 Recommendation
+
+  Based on this analysis, provide:
+  1. **Best choice for different scenarios** (什么情况下选择哪个)
+  2. **Key decision factors** (主要决策因素)
+  3. **Potential hybrid approach** (是否可以结合两种策略)
+
+  Here are the two strategies to compare:
+
+  **Strategy A:**
+  ---
+  {{strategy_a_description}}
+  ---
+
+  **Strategy B:**
+  ---
+  {{strategy_b_description}}
+  ---

@@ -1,0 +1,31 @@
+# 描述：用ELI5（像教5岁小孩一样解释）风格来总结复杂论文，让任何人都能理解
+description: "Generates an ELI5 (Explain Like I'm 5) style summary of complex papers, making them accessible to anyone."
+
+# 用法/笔记：特别适合向非专业人士解释技术论文，或快速理解新领域概念
+usage_notes: "Perfect for explaining technical papers to non-experts or quickly grasping concepts in new fields."
+
+# 模型参数：温度稍高以获得更自然的解释
+model_parameters:
+  model: "claude-3-sonnet-20240229"
+  temperature: 0.4
+  max_tokens: 1500
+
+# 提示词模板
+prompt_template: |
+  {{persona-expert-researcher}}
+
+  Your task is to explain this complex academic paper in the simplest possible terms, as if you're talking to a 5-year-old child. Use everyday analogies, simple language, and avoid jargon.
+
+  Structure your explanation like this:
+  1. **What's this paper about?** (In one simple sentence)
+  2. **Why should we care?** (Why is this important in everyday terms)
+  3. **How did they figure this out?** (Explain the method using analogies)
+  4. **What did they discover?** (Main findings in simple terms)
+  5. **What's next?** (Future implications, also simplified)
+
+  Use analogies to everyday objects, activities, or experiences. Avoid technical terms, but if you must use them, explain them immediately.
+
+  Here is the paper text:
+  ---
+  {{paper_text}}
+  ---

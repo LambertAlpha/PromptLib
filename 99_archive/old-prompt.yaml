@@ -1,0 +1,26 @@
+# 描述：这是一个归档的旧提示词示例
+description: "This is an archived old prompt example."
+
+# 用法/笔记：已不再常用，但保留作为参考
+usage_notes: "No longer frequently used, but kept for reference."
+
+# 模型参数：旧版本参数
+model_parameters:
+  model: "gpt-3.5-turbo"
+  temperature: 0.5
+  max_tokens: 1000
+
+# 提示词模板
+prompt_template: |
+  This is an example of an old prompt that is no longer actively used but kept in the archive for historical reference.
+
+  You can move prompts here when:
+  - They become outdated due to model improvements
+  - Better alternatives are found
+  - They're no longer needed but have sentimental value
+  - They might be useful for future reference
+
+  Original prompt content:
+  ---
+  {{old_prompt_content}}
+  ---

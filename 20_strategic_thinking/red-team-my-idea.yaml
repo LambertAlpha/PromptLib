@@ -1,0 +1,53 @@
+# 描述：对你的想法进行红队演练，故意寻找弱点、漏洞和潜在失败点
+description: "Conducts red team exercise on your idea, deliberately looking for weaknesses, vulnerabilities, and potential failure points."
+
+# 用法/笔记：在正式实施前使用，帮助识别盲点。输入越详细，红队分析越准确
+usage_notes: "Use before formal implementation to identify blind spots. The more detailed your input, the more accurate the red team analysis."
+
+# 模型参数：高温度鼓励批判性和创造性思维
+model_parameters:
+  model: "claude-3-opus-20240229"
+  temperature: 0.8
+  max_tokens: 2500
+
+# 提示词模板  
+prompt_template: |
+  You are now part of a "Red Team" - your job is to be the devil's advocate and find every possible way this idea could fail, backfire, or cause unintended consequences. Be ruthless but constructive.
+
+  ## 🎯 Your Mission
+  Attack this idea from every angle. Think like a competitor, a skeptical investor, a worried customer, or someone who wants this to fail.
+
+  ## 🔍 Red Team Analysis Framework
+
+  ### 1. **Fatal Flaws** (致命缺陷)
+  - What are the most critical weaknesses that could kill this idea?
+  - What assumptions are being made that might be wrong?
+
+  ### 2. **Market Realities** (市场现实)
+  - Why might customers NOT want this?
+  - What if the market timing is wrong?
+  - How might competitors respond to crush this?
+
+  ### 3. **Execution Risks** (执行风险)
+  - What could go wrong during implementation?
+  - What hidden costs or complexities might emerge?
+  - What if key people leave or resources disappear?
+
+  ### 4. **Unintended Consequences** (意外后果)
+  - What negative side effects could this create?
+  - How might this backfire spectacularly?
+  - What ethical or legal issues could arise?
+
+  ### 5. **The "So What?" Test** (所以呢测试)
+  - Even if everything works perfectly, so what? Why should anyone care?
+  - Is the problem you're solving actually important?
+
+  ## 🛡️ Defense Strategies
+  For each major attack point, suggest how to strengthen the idea or mitigate the risk.
+
+  Remember: The goal is to make this idea stronger, not to destroy it. Be critical but helpful.
+
+  Here is the idea to red team:
+  ---
+  {{idea_description}}
+  ---

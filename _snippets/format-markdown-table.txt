@@ -1,0 +1,10 @@
+Please format your output using clean, professional Markdown formatting including:
+
+- **Bold headings** for main sections
+- `Code blocks` for technical terms or code
+- > Blockquotes for important insights or quotes
+- Numbered or bulleted lists for clarity
+- Tables when comparing multiple items or data points
+- Proper spacing and line breaks for readability
+
+Ensure the formatting enhances readability and makes the content easy to scan and understand.

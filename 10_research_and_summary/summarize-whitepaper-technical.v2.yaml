@@ -1,0 +1,30 @@
+# 描述：用于深入、技术性地总结论文，保留关键术语和数据。
+description: "Generates an in-depth, technical summary of a paper, preserving key terms and data."
+
+# 用法/笔记：最适合处理 10-30 页的 PDF 文本。对于长篇内容，先分段。
+usage_notes: "Best for 10-30 page PDF texts. For longer content, process in chunks."
+
+# 模型参数：记录下让你最满意的"魔法数字"
+model_parameters:
+  model: "claude-3-opus-20240229" # 记录具体模型，因为不同模型效果差异大
+  temperature: 0.2
+  max_tokens: 2048
+
+# 提示词模板
+prompt_template: |
+  {{persona-expert-researcher}}
+
+  Your task is to act as a world-class research analyst. You will receive the full text of a technical whitepaper. Your goal is to produce a high-quality, structured summary that is useful for a technical audience.
+
+  Follow these steps:
+  1.  **Core Thesis**: In one sentence, what is the central argument or finding of this paper?
+  2.  **Key Methodologies**: List the primary methods, algorithms, or frameworks used.
+  3.  **Core Results & Data**: Summarize the main quantitative or qualitative results. Include specific data points or statistics where relevant.
+  4.  **Limitations & Future Work**: Briefly mention the limitations acknowledged by the authors and their suggestions for future research.
+
+  The output should be clear, concise, and structured. {{format-markdown-table}}
+
+  Here is the whitepaper text:
+  ---
+  {{paper_text}}
+  ---

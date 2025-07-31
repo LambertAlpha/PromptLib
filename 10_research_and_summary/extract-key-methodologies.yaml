@@ -1,0 +1,33 @@
+# 描述：从学术论文中提取和分析核心方法论，重点关注可复现的技术细节
+description: "Extracts and analyzes core methodologies from academic papers, focusing on reproducible technical details."
+
+# 用法/笔记：适用于需要了解论文技术实现的情况，特别适合研究者想要复现实验时使用
+usage_notes: "Ideal for understanding technical implementations, especially when researchers want to reproduce experiments."
+
+# 模型参数：低温度确保准确提取技术细节
+model_parameters:
+  model: "claude-3-opus-20240229"
+  temperature: 0.1
+  max_tokens: 2500
+
+# 提示词模板
+prompt_template: |
+  {{persona-expert-researcher}}
+
+  Your task is to extract and analyze the core methodologies from this academic paper. Focus on the technical approaches that could be reproduced by other researchers.
+
+  Structure your analysis as follows:
+  1. **Primary Methodology**: What is the main technical approach or algorithm used?
+  2. **Data Collection & Preprocessing**: How did they gather and prepare their data?
+  3. **Experimental Design**: What was their experimental setup and control variables?
+  4. **Evaluation Metrics**: What specific metrics did they use to measure success?
+  5. **Implementation Details**: Any specific technical parameters, hyperparameters, or configuration details mentioned?
+  6. **Tools & Technologies**: What software, frameworks, or hardware did they use?
+  7. **Reproducibility Notes**: Based on the information provided, what would be needed to reproduce this work?
+
+  {{format-markdown-table}}
+
+  Here is the paper text:
+  ---
+  {{paper_text}}
+  ---
